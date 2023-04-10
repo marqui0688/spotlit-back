@@ -4,7 +4,7 @@
  */
 exports.up = function (knex) {
   return knex.schema.createTable("auditions", (table) => {
-    table.increments("id").primary();
+    table.uuid("id").primary();
     table.string("project").notNullable();
     table.string("role").notNullable();
     table.string("deadline").notNullable();

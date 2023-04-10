@@ -5,6 +5,8 @@ const PORT = process.env.PORT || 5050;
 
 const auditionsRoutes = require("./routes/auditions");
 app.use(cors());
+app.use(express.json());
+
 app.listen(PORT, () => {
   console.log(`running at http://localhost:${PORT}`);
 });
